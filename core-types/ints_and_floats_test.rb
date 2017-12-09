@@ -20,8 +20,8 @@ class IntsAndFloatsTest < Minitest::Test
     assert_equal __, (12./ 3)
     assert_equal __, (18 / 6)
     assert_equal __, (18 / 7)
-    assert_equal __, (18.0 / 7)
-    assert_equal __, (18 / 7.0)
+    assert_equal __, (18.0 / 7).round(2)
+    assert_equal __, (18 / 7.0).round(2)
   end
 
   def test_multiply

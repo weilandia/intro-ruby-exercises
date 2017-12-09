@@ -10,8 +10,7 @@ class StringTest < Minitest::Test
   end
 
   def test_upcase
-    skip
-    assert_equal __, "run!".upcase
+    assert_equal "RUN!", "run!".upcase
   end
 
   def test_downcase
@@ -20,7 +19,6 @@ class StringTest < Minitest::Test
   end
 
   def test_check_if_all_caps
-    skip
     maybe "abc".upcase == "abc"
     maybe "ABC".upcase == "ABC"
     maybe "Hæ?".upcase == "Hæ?"
