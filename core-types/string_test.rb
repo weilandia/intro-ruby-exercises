@@ -51,10 +51,9 @@ class StringTest < Minitest::Test
   end
 
   def test_delete
-    skip
-    assert_equal __, "eeny, meeny, miny, moe".delete("e")
-    assert_equal __, "eeny, meeny, miny, moe".delete("m")
-    assert_equal __, "eeny, meeny, miny, moe".delete("n")
+    assert_equal "ny, mny, miny, mo", "eeny, meeny, miny, moe".delete("e")
+    assert_equal "eeny, eeny, iny, oe", "eeny, meeny, miny, moe".delete("m")
+    assert_equal "eey, meey, miy, moe", "eeny, meeny, miny, moe".delete("n")
   end
 
   def test_reverse
