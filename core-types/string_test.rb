@@ -45,10 +45,9 @@ class StringTest < Minitest::Test
   end
 
   def test_chomp
-    skip
-    assert_equal __, "go\n\n".chomp
-    assert_equal __, "go\n".chomp
-    assert_equal __, "go".chomp
+    assert_equal "go\n", "go\n\n".chomp
+    assert_equal "go", "go\n".chomp
+    assert_equal "go", "go".chomp
   end
 
   def test_delete
