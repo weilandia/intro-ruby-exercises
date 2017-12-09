@@ -58,9 +58,9 @@ class StringTest < Minitest::Test
 
   def test_reverse
     skip
-    assert_equal __, "ZOMG SO MUCH FUN!!1!".reverse
-    assert_equal __, "bubbly pies".reverse
-    assert_equal __, "racecar".reverse
+    assert_equal "!1!!NUF HCUM OS GMOZ", "ZOMG SO MUCH FUN!!1!".reverse
+    assert_equal "seip ylbbub", "bubbly pies".reverse
+    assert_equal "racecar", "racecar".reverse
   end
 
   def test_squeeze

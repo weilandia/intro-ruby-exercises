@@ -98,30 +98,29 @@ class IntsAndFloatsTest < Minitest::Test
   end
 
   def test_floor
-    skip
-    assert_equal __, 8.floor
-    assert_equal __, 8.9.floor
-    assert_equal __, 0.9.floor
-    assert_equal __, 0.23.floor
-    assert_equal __, -83.82.floor
+    assert_equal 8, 8.floor
+    assert_equal 8, 8.9.floor
+    assert_equal 0, 0.9.floor
+    assert_equal 0, 0.23.floor
+    assert_equal -83, -83.82.floor
   end
 
   def test_ceil
     skip
-    assert_equal __, 8.ceil
-    assert_equal __, 8.9.ceil
-    assert_equal __, 0.9.ceil
-    assert_equal __, 0.23.ceil
-    assert_equal __, -83.82.ceil
+    assert_equal 8, 8.ceil
+    assert_equal 9, 8.9.ceil
+    assert_equal 1, 0.9.ceil
+    assert_equal 1, 0.23.ceil
+    assert_equal -83, -83.82.ceil
   end
 
   def test_abs
     skip
-    assert_equal __, 8.abs
-    assert_equal __, 8.9.abs
-    assert_equal __, 0.9.abs
-    assert_equal __, 0.23.abs
-    assert_equal __, -83.82.abs
+    assert_equal 8, 8.abs
+    assert_equal 9, 8.9.abs
+    assert_equal 1, 0.9.abs
+    assert_equal 0, 0.23.abs
+    assert_equal -83, -83.82.abs
   end
 
 end
