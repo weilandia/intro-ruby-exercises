@@ -20,14 +20,14 @@ class StringTest < Minitest::Test
   def test_check_if_all_caps
     refute "abc".upcase == "abc"
     assert "ABC".upcase == "ABC"
-    refute "Hæ?".upcase == "Hæ?"
+    assert "Hæ?".upcase == "Hæ?"
     assert "1, 2, 3".upcase == "1, 2, 3"
   end
 
   def test_if_all_lowercase
     assert "abc".downcase == "abc"
     refute "ABC".downcase == "ABC"
-    refute "Æsj!".downcase == "Æsj!"
+    assert "Æsj!".downcase == "Æsj!"
     assert "1, 2, 3".downcase == "1, 2, 3"
   end
 
