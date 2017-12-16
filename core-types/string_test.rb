@@ -5,31 +5,30 @@ require 'minitest/pride'
 
 class StringTest < Minitest::Test
   def test_capitalize
-    assert_equal __, "alice".capitalize
-    assert_equal __, "alice smith".capitalize
+    assert_equal "Alice", "alice".capitalize
+    assert_equal "Alice smith", "alice smith".capitalize
   end
 
   def test_upcase
-    skip
-    assert_equal __, "run!".upcase
+    assert_equal "RUN!", "run!".upcase
   end
 
   def test_downcase
-    skip
-    assert_equal __, "I'M OVER HERE".downcase
+
+    assert_equal "i'm over here", "I'M OVER HERE".downcase
   end
 
   def test_check_if_all_caps
-    skip
-    maybe "abc".upcase == "abc"
-    maybe "ABC".upcase == "ABC"
-    maybe "Hæ?".upcase == "Hæ?"
-    maybe "1, 2, 3".upcase == "1, 2, 3"
+
+    refute "ABC".upcase == "abc"
+    assert "ABC".upcase == "ABC"
+    refute "Hæ?".upcase == "Hæ?"
+    assert "1, 2, 3".upcase == "1, 2, 3"
   end
 
   def test_if_all_lowercase
-    skip
-    maybe "abc".downcase == "abc"
+
+
     maybe "ABC".downcase == "ABC"
     maybe "Æsj!".downcase == "Æsj!"
     maybe "1, 2, 3".downcase == "1, 2, 3"

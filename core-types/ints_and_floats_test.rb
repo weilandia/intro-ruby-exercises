@@ -5,23 +5,22 @@ require 'minitest/pride'
 
 class IntsAndFloatsTest < Minitest::Test
   def test_add
-    assert_equal __, (7.+ 2)
-    assert_equal __, (8 + 5)
+    assert_equal 9, (7.+ 2)
+    assert_equal 13, (8 + 5)
   end
 
   def test_subtract
-    skip
-    assert_equal __, (5.- 8)
-    assert_equal __, (10 - 3)
+    assert_equal -3, (5.- 8)
+    assert_equal 7, (10 - 3)
   end
 
   def test_divide
-    skip
-    assert_equal __, (12./ 3)
-    assert_equal __, (18 / 6)
-    assert_equal __, (18 / 7)
-    assert_equal __, (18.0 / 7)
-    assert_equal __, (18 / 7.0)
+
+    assert_equal 4, (12./ 3)
+    assert_equal 3, (18 / 6)
+    assert_equal 2, (18 / 7).round(2)
+    assert_equal 2.57, (18.0 / 7).round(2)
+    assert_equal 2.57, (18 / 7.0).round(2)
   end
 
   def test_multiply
