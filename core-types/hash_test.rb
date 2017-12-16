@@ -10,7 +10,7 @@ class HashTest < Minitest::Test
   def test_access
     skip
     ages = {16 => ["Alice", "Bob"], 24 => ["Charlie", "Dave"], 37 => ["Eve"]}
-    
+
     assert_equal __, ages[16]
     assert_equal __, ages[37]
   end
@@ -18,23 +18,23 @@ class HashTest < Minitest::Test
   def test_access_with_symbols
     skip
     ages = {
-      siblings: ["Alice", "Bob"], 
-      brothers: ["Charlie", "Dave"], 
+      siblings: ["Alice", "Bob"],
+      brothers: ["Charlie", "Dave"],
       only_child: ["Eve"]
     }
-    
+
     assert_equal __, ages[:siblings]
     assert_equal __, ages[:only_child]
   end
-  
+
   def test_hash_alternative_symbol_assignment
     skip
     new_restaurants = {
-      "cultura": "Latin American", 
+      "cultura": "Latin American",
       "wallys": "Wisconsin treats",
       "hickory_ash": "Colorado-centric"
       }
-    
+
     assert_equal "Latin American", __
     assert_equal "Wisconsin treats", __
     assert_equal "Colorado-centric", __
@@ -46,7 +46,7 @@ class HashTest < Minitest::Test
     stuff["c"] = ["cook", "caramel candy"]
     stuff["b"] = "brandy"
     stuff["a"] = stuff["a"] + ["apricot"]
-    
+
     assert_equal __, stuff["a"]
     assert_equal __, stuff["b"]
     assert_equal __, stuff["c"]
@@ -55,14 +55,14 @@ class HashTest < Minitest::Test
   def test_assignment_with_symbols
     skip
     plants = {
-      dahlia: ["Crichton Honey", "Whimsey", "Kasasagi"], 
+      dahlia: ["Crichton Honey", "Whimsey", "Kasasagi"],
       hollyhock: ["Chater's Salmon Queen", "Blackberry"]}
     plants[:snapdragon] = ["Black Prince", "Madame Butterfly"]
     plants[:hollyhock] = ["Majorette Mix"]
     plants[:dahlia] += ["Jitterbug"]
-    
+
     expected_dahlias = __
-    
+
     assert_equal expected_dahlias, plants[:dahlia]
     assert_equal __, plants[:snapdragon]
     assert_equal __, plants[:hollyhock]
@@ -87,7 +87,7 @@ class HashTest < Minitest::Test
     assert_equal __, {1 => "one", 2 => "two"}.values
     assert_equal __, {"a" => "apple", "banana" => "b"}.values
   end
-  
+
   def test_values_with_symbols
     skip
     assert_equal __, {france: "Paris", lithuania: "Vilnius"}.values
@@ -113,7 +113,7 @@ class HashTest < Minitest::Test
     boolean = {"a" => "apple"}.member?("apple")
     maybe boolean
   end
-  
+
   def test_key
     boolean = {}.key?("a")
     maybe boolean
@@ -122,7 +122,7 @@ class HashTest < Minitest::Test
     boolean = {"a" => "apple"}.key?("apple")
     maybe boolean
   end
-  
+
   def test_member_and_include_and_key_with_symbols_and_strings
     skip
     boolean = {}.include?(:cake)
@@ -147,10 +147,10 @@ class HashTest < Minitest::Test
     skip
     h1 = {"a" => "apple", "b" => "banana"}.invert
     h2 = {1 => "one", 2 => "two"}.invert
-    
+
     expected_h1 = __
     expected_h2 = __
-    
+
     assert_equal expected_h1, h1
     assert_equal expected_h2, h2
   end
@@ -159,13 +159,13 @@ class HashTest < Minitest::Test
     skip
     food_colors = {beets: "purple", kiwis: "green"}.invert
     foods_with_many_colors = {
-      apples: ["green", "red", "yellow"], 
+      apples: ["green", "red", "yellow"],
       potatoes: ["brown", "red", "purple"]
     }.invert
-    
+
     expected_food_colors = __
     expected_foods_with_many_colors = __
-    
+
     assert_equal expected_food_colors, food_colors
     assert_equal expected_foods_with_many_colors, foods_with_many_colors
   end
@@ -185,7 +185,7 @@ class HashTest < Minitest::Test
     h3 = apple.merge({"b" => "banana"})
     h4 = apple.merge({"a" => "avocado", "b" => "banana"})
     h5 = {"a" => "apple", "b" => "banana"}.merge({"b" => "breadfruit"})
-    
+
     expected_h1 = __
     expected_h2 = __
     expected_apple = __
@@ -213,7 +213,7 @@ class HashTest < Minitest::Test
     tv_characters = battlestar_characters.merge(futurama_characters)
     tv_characters = tv_characters.merge({breaking_bad: "Walter White"})
     shape_sides = {circle: 1}.merge({square: 4, circle: "infinite"})
-    
+
     expected_favorite_restaurants = __
     expected_name_lengths = __
     expected_planet_rings = __
@@ -237,7 +237,7 @@ class HashTest < Minitest::Test
     h3 = apple.update({"b" => "banana"})
     h4 = apple.update({"a" => "avocado", "b" => "banana"})
     h5 = {"a" => "apple", "b" => "banana"}.update({"b" => "breadfruit"})
-    
+
     expected_h1 = __
     expected_h2 = __
     expected_apple = __
@@ -252,7 +252,7 @@ class HashTest < Minitest::Test
     assert_equal expected_h4, h4
     assert_equal expected_h5, h5
   end
-  
+
   def test_update_with_symbols
     skip
     new_restaurants = {"cultura": "Latin American", "wallys": "Wisconsin treats"}
@@ -266,7 +266,7 @@ class HashTest < Minitest::Test
     tv_characters = battlestar_characters.update(futurama_characters)
     tv_characters.update({breaking_bad: "Walter White"})
     shape_sides = {circle: 1}.update({square: 4, "circle": "infinite"})
-    
+
     expected_favorite_restaurants = __
     expected_name_lengths = __
     expected_name_lengths_2 = __
@@ -274,7 +274,7 @@ class HashTest < Minitest::Test
     expected_saturn = __
     expected_tv_characters = __
     expected_shape_sides = __
-    
+
     assert_equal expected_favorite_restaurants, favorite_restaurants
     assert_equal expected_name_lengths, name_lengths
     assert_equal expected_name_lengths_2, name_lengths_2
@@ -283,3 +283,4 @@ class HashTest < Minitest::Test
     assert_equal expected_tv_characters, tv_characters
     assert_equal expected_shape_sides, shape_sides
   end
+end
