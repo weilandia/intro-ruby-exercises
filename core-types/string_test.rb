@@ -5,54 +5,48 @@ require 'minitest/pride'
 
 class StringTest < Minitest::Test
   def test_capitalize
-    assert_equal __, "alice".capitalize
-    assert_equal __, "alice smith".capitalize
+    assert_equal "Alice", "alice".capitalize
+    assert_equal "Alice smith", "alice smith".capitalize
   end
 
   def test_upcase
-    skip
-    assert_equal __, "run!".upcase
+    assert_equal "RUN!", "run!".upcase
   end
 
   def test_downcase
-    skip
-    assert_equal __, "I'M OVER HERE".downcase
+    assert_equal "i'm over here", "I'M OVER HERE".downcase
   end
 
   def test_check_if_all_caps
     skip
-    maybe "abc".upcase == "abc"
-    maybe "ABC".upcase == "ABC"
-    maybe "Hæ?".upcase == "Hæ?"
-    maybe "1, 2, 3".upcase == "1, 2, 3"
+    refute "abc".upcase == "abc"
+    assert_equal "ABC".upcase == "ABC"
+    refute "Hæ?".upcase == "Hæ?"
+    refute "1, 2, 3".upcase == "1, 2, 3"
   end
 
   def test_if_all_lowercase
-    skip
-    maybe "abc".downcase == "abc"
-    maybe "ABC".downcase == "ABC"
-    maybe "Æsj!".downcase == "Æsj!"
-    maybe "1, 2, 3".downcase == "1, 2, 3"
+    assert "abc".downcase == "abc"
+    refute "ABC".downcase == "ABC"
+    refute "Æsj!".downcase == "Æsj!"
+    assert "1, 2, 3".downcase == "1, 2, 3"
   end
 
   def test_upper_and_lower_case
-    skip
-    maybe "abc".downcase == "abc".upcase
-    maybe "1, 2, 3".downcase == "1, 2, 3".upcase
-    maybe "%$#!!1!".downcase == "%$#!!1!".upcase
+    refute "abc".downcase == "abc".upcase
+    assert "1, 2, 3".downcase == "1, 2, 3".upcase
+    assert "%$#!!1!".downcase == "%$#!!1!".upcase
   end
 
   def test_chop
-    skip
-    assert_equal __, "hello!!!".chop
-    assert_equal __, "hello?!".chop
-    assert_equal __, "hello.".chop
-    assert_equal __, "hello".chop
+    assert_equal "hello!!", "hello!!!".chop
+    assert_equal "hello?", "hello?!".chop
+    assert_equal "hello", "hello.".chop
+    assert_equal "hell", "hello".chop
   end
 
   def test_chomp
-    skip
-    assert_equal __, "go\n\n".chomp
+    assert_equal "go\n", "go\n\n".chomp
     assert_equal __, "go\n".chomp
     assert_equal __, "go".chomp
   end
